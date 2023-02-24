@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TalksoBackEndApplication {
 
   public static void main(String[] args) {
+    System.out.println("HEllo WOrld");
     SpringApplication.run(TalksoBackEndApplication.class, args);
   }
 
