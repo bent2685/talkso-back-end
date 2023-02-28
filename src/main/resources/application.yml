@@ -51,7 +51,7 @@ mybatis-plus:
   #??Mapper????
   mapper-locations: classpath:/mybatis/mappers/*.xml
   # ??Mybatis?????????????????
-  type-aliases-package: com.yunnuo.server.pojo
+  type-aliases-package: com.tzvtc.talksobackend.entity
   configuration:
     # ??????
     map-underscore-to-camel-case: false
