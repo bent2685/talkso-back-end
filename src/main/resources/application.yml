@@ -1,0 +1,55 @@
+spring:
+  profiles:
+    active: dev
+  output:
+    ansi:
+      enabled: always
+  devtools:
+    restart:
+      # ???true
+      enabled: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    client-type: jedis
+    host: 127.0.0.1
+    port: 6379
+    password:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+sa-token:
+  # token??
+  token-name: authorization
+  # token??????
+  timeout: 2592000
+  activity-timeout: -1
+  # ???????????? (?true???????, ?false?????????)
+  is-concurrent: false
+  is-share: false
+  # token??
+  token-style: random-64
+  # ????????
+  is-log: false
+
+pagehelper:
+  helper-dialect: mysql
+  support-methods-arguments: true
+  params: countSql
+  reasonable: true
+
+logging:
+  config: classpath:logback.xml
+
+#mybatis-plus??
+mybatis-plus:
+  #??Mapper????
+  mapper-locations: classpath:/mybatis/mappers/*.xml
+  # ??Mybatis?????????????????
+  type-aliases-package: com.yunnuo.server.pojo
+  configuration:
+    # ??????
+    map-underscore-to-camel-case: false
