@@ -9,5 +9,4 @@ public class TalksoBackEndApplication {
   public static void main(String[] args) {
     SpringApplication.run(TalksoBackEndApplication.class, args);
   }
-
 }

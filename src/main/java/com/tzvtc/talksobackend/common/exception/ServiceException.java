@@ -1,4 +1,4 @@
-package com.tzvtc.talksobackend.common.taglibexception;
+package com.tzvtc.talksobackend.common.exception;
 
 import com.tzvtc.talksobackend.common.resultcode.ResultCodeEnum;
 
