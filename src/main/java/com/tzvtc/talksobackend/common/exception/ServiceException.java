@@ -1,14 +1,28 @@
 package com.tzvtc.talksobackend.common.exception;
 
-import com.tzvtc.talksobackend.common.resultcode.ResultCodeEnum;
+import com.tzvtc.talksobackend.common.enums.ResultCodeEnum;
+import lombok.Getter;
+import lombok.ToString;
 
-public class ServiceException extends RuntimeException{
-
+@Getter
+@ToString
+public class ServiceException extends RuntimeException {
   private ResultCodeEnum resultCodeEnum;
-
   private String message;
+  private Object data = null;
 
-  private Object data;
 
- 
+  public ServiceException(ResultCodeEnum resultCodeEnum, String message) {
+    super(message);
+    this.resultCodeEnum = resultCodeEnum;
+    this.message = message;
+  }
+
+  public ServiceException(String message) {
+    this(ResultCodeEnum.UNKNOWN_REASON, message);
+  }
+
+  public ServiceException(ResultCodeEnum resultCodeEnum) {
+    this(resultCodeEnum, resultCodeEnum.getMessage());
+  }
 }

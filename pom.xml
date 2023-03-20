@@ -83,23 +83,19 @@
       <artifactId>mybatis-plus-core</artifactId>
       <version>3.4.3.1</version>
     </dependency>
-    <!--       mybatis-plus end-->
+    <!-- mybatis-plus end-->
 
-    <!--    slf4j-start-->
+    <!-- slf4j-start-->
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>2.0.6</version>
+      <version>1.7.30</version>
     </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-      <version>2.0.6</version>
-    </dependency>
-    <!--    slf4j-end-->
 
-    <!--    redis-start-->
+    <!-- slf4j-end -->
+
+    <!-- redis-start -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -110,17 +106,17 @@
       <artifactId>jedis</artifactId>
       <version>3.7.0</version>
     </dependency>
-    <!--    redis-end-->
+    <!-- redis-end -->
 
-    <!--java mail start-->
+    <!-- java mail start -->
     <dependency>
       <groupId>javax.mail</groupId>
       <artifactId>mail</artifactId>
       <version>1.4.7</version>
     </dependency>
-    <!--java mail end-->
+    <!-- java mail end -->
 
-    <!--cglib start-->
+    <!-- cglib start -->
     <dependency>
       <groupId>asm</groupId>
       <artifactId>asm</artifactId>
@@ -141,15 +137,51 @@
       <artifactId>cglib-nodep</artifactId>
       <version>2.2.2</version>
     </dependency>
-    <!--    cglib end-->
+    <!-- cglib end -->
 
-    <!--    token start-->
+    <!-- token start -->
     <dependency>
       <groupId>cn.dev33</groupId>
       <artifactId>sa-token-spring-boot-starter</artifactId>
       <version>1.33.0</version>
     </dependency>
-    <!--    token end-->
+    <!-- token end -->
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-boot-starter</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.xiaoymin</groupId>
+      <artifactId>knife4j-spring-boot-starter</artifactId>
+      <version>3.0.3</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/net.coobird/thumbnailator -->
+    <dependency>
+      <groupId>net.coobird</groupId>
+      <artifactId>thumbnailator</artifactId>
+      <version>0.4.8</version>
+    </dependency>
+
+
+    <!-- 虹软人脸识别 -->
+    <dependency>
+      <groupId>com.arcsoft.face</groupId>
+      <artifactId>arcsoft-sdk-face</artifactId>
+      <version>3.0.0.0</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/arcsoft-sdk-face-3.0.0.0.jar</systemPath>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
+    <dependency>
+      <groupId>cn.hutool</groupId>
+      <artifactId>hutool-all</artifactId>
+      <version>5.7.5</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -168,6 +200,7 @@
         <configuration>
           <fork>false</fork>
           <addResources>true</addResources>
+          <includeSystemScope>true</includeSystemScope>
           <excludes>
             <exclude>
               <groupId>org.projectlombok</groupId>
