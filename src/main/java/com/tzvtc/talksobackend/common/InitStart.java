@@ -20,9 +20,9 @@ public class InitStart {
 
   // 初始化ArcFaceBuilder
   public void initArcFaceBuilder() {
-    List<String> enginePathList = Arrays.asList("sdks", "arcface", "WIN64");
+    List<String> enginePathList = Arrays.asList("sdks", "arcface", "LINUX64");
     ArcFaceBuilder.appId = "62NBG96dw3B7mYet1NTk8jGbhndktT5LDq4oNkbSafCd";
-    ArcFaceBuilder.sdkKey = "Ap9MUww7JkWzpC1F4tH7FnDkGa9nH4qaWyoBc42zDkfe";
+    ArcFaceBuilder.sdkKey = "Ap9MUww7JkWzpC1F4tH7FnDk8TaZr8WaxTRFUVJqvgdF";
     ArcFaceBuilder.faceEnginePath = UploadUtil.getResourcesPathFile(enginePathList).getAbsolutePath();
   }
 }

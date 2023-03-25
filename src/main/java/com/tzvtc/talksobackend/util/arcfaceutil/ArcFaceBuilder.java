@@ -32,10 +32,10 @@ public class ArcFaceBuilder {
     // dll路径
     FaceEngine faceEngine = new FaceEngine(faceEnginePath);
     // active
-//    int activeCode = faceEngine.activeOnline(appId, sdkKey);
-//    if (activeCode != ErrorInfo.MOK.getValue() && activeCode != ErrorInfo.MERR_ASF_ALREADY_ACTIVATED.getValue()) {
-//      throw new ExceptionInInitializerError("failed to active arcsoft-face engine");
-//    }
+    int activeCode = faceEngine.activeOnline(appId, sdkKey);
+    if (activeCode != ErrorInfo.MOK.getValue() && activeCode != ErrorInfo.MERR_ASF_ALREADY_ACTIVATED.getValue()) {
+      throw new ExceptionInInitializerError("failed to active arcsoft-face engine");
+    }
 
     // 引擎配置
     EngineConfiguration engineConfiguration = new EngineConfiguration();

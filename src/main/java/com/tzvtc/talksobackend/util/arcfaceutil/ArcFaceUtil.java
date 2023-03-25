@@ -213,7 +213,10 @@ public class ArcFaceUtil {
 
       // 如果相似度大于上一个，则覆盖
       float similarValue = faceComparison(sourceFaceFeature, targetFaceFeature, compareModel);
-      if (similarValue > mostSimilarValue) mostSimilarEl = targetEl;
+      if (similarValue > mostSimilarValue) {
+        mostSimilarValue = similarValue;
+        mostSimilarEl = targetEl;
+      }
     }
 
     return mostSimilarEl;

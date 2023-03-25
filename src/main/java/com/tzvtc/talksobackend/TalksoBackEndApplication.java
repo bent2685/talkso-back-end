@@ -2,6 +2,7 @@ package com.tzvtc.talksobackend;
 
 import com.arcsoft.face.*;
 import com.arcsoft.face.enums.CompareModel;
+import com.arcsoft.face.enums.ErrorInfo;
 import com.arcsoft.face.toolkit.ImageFactory;
 import com.arcsoft.face.toolkit.ImageInfo;
 import com.arcsoft.face.toolkit.ImageInfoEx;
@@ -32,8 +33,12 @@ public class TalksoBackEndApplication {
 
   public static void testArcFace() {
 
-    File file1 = new File("F:\\Project\\talkso\\assets\\zjz1.png");
-    File file2 = new File("F:\\Project\\talkso\\assets\\zjz3.png");
-    System.out.println(ArcFaceUtil.faceComparison(file1, file2));
+//    File file1 = new File("F:\\Project\\talkso\\assets\\zjz1.png");
+    File file2 = new File("F:" + File.separator + "Project" + File.separator + "talkso" + File.separator + "assets" + File.separator + "ne.jpg");
+//    File file2 = new File("F:\\Project\\talkso\\assets\\zjz3.png");
+//    System.out.println(ArcFaceUtil.faceComparison(file1, file2));
+
+    System.out.println(file2.exists());
+//    System.out.println(ArcFaceUtil.getGender(file2));
   }
 }
