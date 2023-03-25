@@ -20,7 +20,7 @@ public class Resp<T> {
   }
 
   /**
-   * 业务成功返回业务代码和描述信息
+   * 业务成功返回业务代码和描述信息11
    */
   public static Resp<Void> ok() {
     return new Resp<>(ResultCodeEnum.SUCCESS, null);
